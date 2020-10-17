@@ -1,0 +1,35 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	margin: 5px 20px;
+	align-items: center;
+}
+
+.question_div {
+	width: 90px;
+	height: 30px;
+	text-align: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+.vital_question {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.vital_input {
+	height: 30px;
+	margin-right: 10px;
+	background-color: #ffeaa7;
+	text-align: center;
+	border: none;
+}
+.vital_input:focus {
+	outline: none;
+}
+.vital_unit {
+	font-size: 16px;
+	font-weight: 300;
+}

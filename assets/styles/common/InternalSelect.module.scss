@@ -1,0 +1,58 @@
+.container {
+	width: calc(100% - 40px);
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px 20px 10px 20px;
+}
+.name {
+	width: 100%;
+	text-align: left;
+	font-size: 16px;
+	font-weight: 300;
+	height: 30px;
+}
+.name_highlight {
+	color: red;
+	font-weight: 400;
+}
+
+.select_container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.select {
+	width: 100px;
+	height: 50px;
+	border: solid 1px #bcc4da;
+	border: solid 1px #dedede;
+	border-radius: 8px;
+	background-color: #ffffff;
+
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 0.05px;
+	color: #2d3958;
+	color: #333;
+	cursor: pointer;
+}
+.yes {
+	cursor: pointer;
+}
+.no {
+	cursor: pointer;
+}
+.help {
+	cursor: pointer;
+}
+.select:focus {
+	outline: none;
+}
+.selected {
+	border: solid 1.5px #ffc72c;
+	background-color: #ffeaa7;
+}
