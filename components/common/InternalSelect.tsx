@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import s from "$/common/InternalSelect.module.scss"
 
-const InputField = ({ name, question }) => {
+const InputField = ({ title, question }) => {
 
     const ref = useRef(null);
 
@@ -27,7 +27,7 @@ const InputField = ({ name, question }) => {
     
     return (
         <div className={s.container} ref={ref}>
-            <p className={s.name}>과거에 <span className={s.name_highlight}>{name}</span>{question}</p>
+            <p className={s.name}>과거에 <span className={s.name_highlight}>{title}</span>{question}</p>
             
             <div className={s.select_container}>
                 <button className={`${s.select} ${s.yes}`} onClick={() => {clicked("yes")}}>예</button>
