@@ -4,6 +4,7 @@ import withRedux from "next-redux-wrapper";
 import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
 import reducer from "../reducers";
+import { composeWithDevTools } from 'redux-devtools-extension';
 import '$/globals.css'
 
 function App({ Component, store, pageProps }) {
@@ -30,14 +31,8 @@ App.getInitialProps = async (context) => {
   return { pageProps };
 };
 
-export default withRedux((initialState, options) => {
+export default withRedux((initialState:any) => {
   const middlewares = [];
-  const enhancer = compose(applyMiddleware(...middlewares),
-    typeof window !== "undefined" ? (
-      typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== "undefined"
-        ? window.__REDUX_DEVTOOLS_EXTENSION__()
-        : (f) => f
-    ) : (f) => f);
-  const store = createStore(reducer, initialState, enhancer);
+  const store = createStore(reducer, initialState, composeWithDevTools(applyMiddleware(...middlewares)));
   return store;
 })(App);
